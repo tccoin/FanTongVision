@@ -1,0 +1,1 @@
+python setup.py build_ext --inplace -DMS_WIN64
