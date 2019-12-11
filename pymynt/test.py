@@ -1,17 +1,9 @@
+import cv2
 import pymynt
-from scipy import misc
-from PIL import Image
-import time
-import psutil
+import numpy as np
 
-# im_np = misc.imread('test.jpg')
-# opencvsample.openImage(im_np)
-# opencvsample.test()
 pymynt.init_camera()
-for i in range(100):
-    img = Image.fromarray(pymynt.get_depth_image())
-    img.show('test')
-    time.sleep(1)
-    for proc in psutil.process_iter():
-        if proc.name() == "display":
-            proc.kill()
+while True:
+    mat = pymynt.get_depth_image()
+    cv2.imshow('test',mat)
+    cv2.waitKey(17)

@@ -11,7 +11,6 @@ MYNTEYE_USE_NAMESPACE
 Camera cam;
 
 cv::Mat getDepthImage(){
-        cv::namedWindow("depth");
   auto image_depth = cam.GetStreamData(ImageType::IMAGE_DEPTH);
   if (image_depth.img) {
     std::cout << "Get Depth Image success" << std::endl << std::endl;
@@ -41,10 +40,11 @@ int init() {
     << dev_info.name << std::endl << std::endl;
 
   OpenParams params(dev_info.index);
+  params.dev_mode = DeviceMode::DEVICE_DEPTH;
   params.depth_mode = DepthMode::DEPTH_COLORFUL;
-  params.stream_mode = StreamMode::STREAM_2560x720;
+  params.stream_mode = StreamMode::STREAM_1280x720;
   params.ir_intensity = 4;
-  params.framerate = 30;
+  params.framerate = 60;
 
   cam.Open(params);
 
@@ -128,6 +128,7 @@ int main(){
   std::cout << "Press ESC/Q on Windows to terminate" << std::endl;
   
 
+  cv::namedWindow("depth");
   cv::Mat depth = getDepthImage();
   cv::imshow("depth", depth);
   cv::waitKey(-1);
