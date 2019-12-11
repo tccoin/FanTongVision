@@ -8,8 +8,7 @@
             "/usr/include/opencv2/highgui/highgui.hpp",
             "/usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h",
             "/usr/lib/python3/dist-packages/numpy/core/include/numpy/ufuncobject.h",
-            "wrapper.cpp",
-            "wrapper.hpp"
+            "wrapper.cpp"
         ],
         "extra_link_args": [
             "-lopencv_shape",
@@ -63,12 +62,12 @@
         "libraries": [
             "mynteye_depth"
         ],
-        "name": "opencvsample",
+        "name": "pymynt",
         "sources": [
-            "opencvsample.pyx"
+            "pymynt.pyx"
         ]
     },
-    "module_name": "opencvsample"
+    "module_name": "pymynt"
 }
 END: Cython Metadata */
 
@@ -676,21 +675,20 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__opencvsample
-#define __PYX_HAVE_API__opencvsample
+#define __PYX_HAVE__pymynt
+#define __PYX_HAVE_API__pymynt
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
 #include "numpy/arrayobject.h"
 #include "numpy/ufuncobject.h"
+#include "opencv2/core/core.hpp"
 #include "ios"
 #include "new"
 #include "stdexcept"
 #include "typeinfo"
-#include <string>
-#include "opencv2/core/core.hpp"
 #include "wrapper.cpp"
-#include "wrapper.hpp"
+#include <string>
 #include "opencv2/highgui/highgui.hpp"
 #ifdef _OPENMP
 #include <omp.h>
@@ -922,7 +920,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "opencvsample.pyx",
+  "pymynt.pyx",
   "stringsource",
   "__init__.pxd",
   "type.pxd",
@@ -1178,7 +1176,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_12opencvsample_PyMat;
+struct __pyx_obj_6pymynt_PyMat;
 
 /* "../../.local/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":815
  * ctypedef npy_longdouble longdouble_t
@@ -1216,14 +1214,14 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "opencvsample.pyx":110
+/* "pymynt.pyx":110
  * 
  * 
  * cdef class PyMat:             # <<<<<<<<<<<<<<
  *     cdef Mat mat
  * 
  */
-struct __pyx_obj_12opencvsample_PyMat {
+struct __pyx_obj_6pymynt_PyMat {
   PyObject_HEAD
   cv::Mat mat;
 };
@@ -1806,24 +1804,22 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'libcpp.string' */
 
-/* Module declarations from 'opencv_mat' */
-
-/* Module declarations from 'opencvsample' */
-static PyTypeObject *__pyx_ptype_12opencvsample_PyMat = 0;
-static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *); /*proto*/
-static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *); /*proto*/
-static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *); /*proto*/
-static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *); /*proto*/
-static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat); /*proto*/
-static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat); /*proto*/
+/* Module declarations from 'pymynt' */
+static PyTypeObject *__pyx_ptype_6pymynt_PyMat = 0;
+static cv::Mat __pyx_f_6pymynt_np2Mat3D(PyArrayObject *); /*proto*/
+static cv::Mat __pyx_f_6pymynt_np2Mat2D(PyArrayObject *); /*proto*/
+static cv::Mat __pyx_f_6pymynt_np2Mat2D_F32(PyArrayObject *); /*proto*/
+static cv::Mat __pyx_f_6pymynt_np2Mat(PyArrayObject *); /*proto*/
+static PyObject *__pyx_f_6pymynt_Mat2np(cv::Mat); /*proto*/
+static PyObject *__pyx_f_6pymynt_showMat(cv::Mat); /*proto*/
 static std::string __pyx_convert_string_from_py_std__in_string(PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_uint8_t = { "uint8_t", NULL, sizeof(__pyx_t_5numpy_uint8_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_uint8_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_uint8_t), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float32_t = { "float32_t", NULL, sizeof(__pyx_t_5numpy_float32_t), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "opencvsample"
-extern int __pyx_module_is_main_opencvsample;
-int __pyx_module_is_main_opencvsample = 0;
+#define __Pyx_MODULE_NAME "pymynt"
+extern int __pyx_module_is_main_pymynt;
+int __pyx_module_is_main_pymynt = 0;
 
-/* Implementation of 'opencvsample' */
+/* Implementation of 'pymynt' */
 static PyObject *__pyx_builtin_TypeError;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
@@ -1852,6 +1848,7 @@ static const char __pyx_k_dstack[] = "dstack";
 static const char __pyx_k_encode[] = "encode";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_np_mat[] = "np_mat";
+static const char __pyx_k_pymynt[] = "pymynt";
 static const char __pyx_k_reduce[] = "__reduce__";
 static const char __pyx_k_asarray[] = "asarray";
 static const char __pyx_k_float32[] = "float32";
@@ -1864,15 +1861,14 @@ static const char __pyx_k_np2Mat2np[] = "np2Mat2np";
 static const char __pyx_k_openImage[] = "openImage";
 static const char __pyx_k_reduce_ex[] = "__reduce_ex__";
 static const char __pyx_k_ValueError[] = "ValueError";
+static const char __pyx_k_pymynt_pyx[] = "pymynt.pyx";
 static const char __pyx_k_ImportError[] = "ImportError";
 static const char __pyx_k_init_camera[] = "init_camera";
 static const char __pyx_k_npto32ftonp[] = "npto32ftonp";
 static const char __pyx_k_RuntimeError[] = "RuntimeError";
-static const char __pyx_k_opencvsample[] = "opencvsample";
 static const char __pyx_k_reduce_cython[] = "__reduce_cython__";
 static const char __pyx_k_get_depth_image[] = "get_depth_image";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
-static const char __pyx_k_opencvsample_pyx[] = "opencvsample.pyx";
 static const char __pyx_k_show_depth_image[] = "show_depth_image";
 static const char __pyx_k_ascontiguousarray[] = "ascontiguousarray";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
@@ -1935,11 +1931,11 @@ static PyObject *__pyx_n_s_numpy;
 static PyObject *__pyx_kp_s_numpy_core_multiarray_failed_to;
 static PyObject *__pyx_kp_s_numpy_core_umath_failed_to_impor;
 static PyObject *__pyx_n_s_openImage;
-static PyObject *__pyx_n_s_opencvsample;
-static PyObject *__pyx_kp_s_opencvsample_pyx;
 static PyObject *__pyx_n_s_order;
 static PyObject *__pyx_n_s_pil_img;
 static PyObject *__pyx_n_s_pyarr;
+static PyObject *__pyx_n_s_pymynt;
+static PyObject *__pyx_kp_s_pymynt_pyx;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_reduce;
 static PyObject *__pyx_n_s_reduce_cython;
@@ -1951,19 +1947,19 @@ static PyObject *__pyx_n_s_show_depth_image;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_uint8;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
-static PyObject *__pyx_pf_12opencvsample_npto32ftonp(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nparr); /* proto */
-static PyObject *__pyx_pf_12opencvsample_2np2Mat2np(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nparray); /* proto */
-static int __pyx_pf_12opencvsample_5PyMat___cinit__(struct __pyx_obj_12opencvsample_PyMat *__pyx_v_self, PyObject *__pyx_v_np_mat); /* proto */
-static PyObject *__pyx_pf_12opencvsample_5PyMat_2get_mat(struct __pyx_obj_12opencvsample_PyMat *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_12opencvsample_5PyMat_4__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_12opencvsample_PyMat *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_12opencvsample_5PyMat_6__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_12opencvsample_PyMat *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_12opencvsample_4openImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pil_img); /* proto */
-static PyObject *__pyx_pf_12opencvsample_6init_camera(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12opencvsample_8get_depth_image(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12opencvsample_10show_depth_image(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_6pymynt_npto32ftonp(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nparr); /* proto */
+static PyObject *__pyx_pf_6pymynt_2np2Mat2np(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nparray); /* proto */
+static int __pyx_pf_6pymynt_5PyMat___cinit__(struct __pyx_obj_6pymynt_PyMat *__pyx_v_self, PyObject *__pyx_v_np_mat); /* proto */
+static PyObject *__pyx_pf_6pymynt_5PyMat_2get_mat(struct __pyx_obj_6pymynt_PyMat *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pymynt_5PyMat_4__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_6pymynt_PyMat *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pymynt_5PyMat_6__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_6pymynt_PyMat *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_6pymynt_4openImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pil_img); /* proto */
+static PyObject *__pyx_pf_6pymynt_6init_camera(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_6pymynt_8get_depth_image(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_6pymynt_10show_depth_image(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
-static PyObject *__pyx_tp_new_12opencvsample_PyMat(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_6pymynt_PyMat(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_2;
@@ -1993,7 +1989,7 @@ static PyObject *__pyx_codeobj__22;
 static PyObject *__pyx_codeobj__24;
 /* Late includes */
 
-/* "opencvsample.pyx":10
+/* "pymynt.pyx":10
  * ###########################################
  * 
  * cdef Mat np2Mat3D(np.ndarray ary):             # <<<<<<<<<<<<<<
@@ -2001,7 +1997,7 @@ static PyObject *__pyx_codeobj__24;
  *     ary = np.dstack((ary[...,2], ary[...,1], ary[...,0])) #RGB -> BGR
  */
 
-static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
+static cv::Mat __pyx_f_6pymynt_np2Mat3D(PyArrayObject *__pyx_v_ary) {
   PyArrayObject *__pyx_v_np_buff = 0;
   unsigned int *__pyx_v_im_buff;
   int __pyx_v_r;
@@ -2027,7 +2023,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
   __pyx_pybuffernd_np_buff.data = NULL;
   __pyx_pybuffernd_np_buff.rcbuffer = &__pyx_pybuffer_np_buff;
 
-  /* "opencvsample.pyx":11
+  /* "pymynt.pyx":11
  * 
  * cdef Mat np2Mat3D(np.ndarray ary):
  *     assert ary.ndim==3 and ary.shape[2]==3, "ASSERT::3channel RGB only!!"             # <<<<<<<<<<<<<<
@@ -2052,7 +2048,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
   }
   #endif
 
-  /* "opencvsample.pyx":12
+  /* "pymynt.pyx":12
  * cdef Mat np2Mat3D(np.ndarray ary):
  *     assert ary.ndim==3 and ary.shape[2]==3, "ASSERT::3channel RGB only!!"
  *     ary = np.dstack((ary[...,2], ary[...,1], ary[...,0])) #RGB -> BGR             # <<<<<<<<<<<<<<
@@ -2101,7 +2097,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
   __Pyx_DECREF_SET(__pyx_v_ary, ((PyArrayObject *)__pyx_t_3));
   __pyx_t_3 = 0;
 
-  /* "opencvsample.pyx":14
+  /* "pymynt.pyx":14
  *     ary = np.dstack((ary[...,2], ary[...,1], ary[...,0])) #RGB -> BGR
  * 
  *     cdef np.ndarray[np.uint8_t, ndim=3, mode ='c'] np_buff = np.ascontiguousarray(ary, dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -2146,7 +2142,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
   __pyx_v_np_buff = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "opencvsample.pyx":15
+  /* "pymynt.pyx":15
  * 
  *     cdef np.ndarray[np.uint8_t, ndim=3, mode ='c'] np_buff = np.ascontiguousarray(ary, dtype=np.uint8)
  *     cdef unsigned int* im_buff = <unsigned int*> np_buff.data             # <<<<<<<<<<<<<<
@@ -2155,7 +2151,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_im_buff = ((unsigned int *)__pyx_v_np_buff->data);
 
-  /* "opencvsample.pyx":16
+  /* "pymynt.pyx":16
  *     cdef np.ndarray[np.uint8_t, ndim=3, mode ='c'] np_buff = np.ascontiguousarray(ary, dtype=np.uint8)
  *     cdef unsigned int* im_buff = <unsigned int*> np_buff.data
  *     cdef int r = ary.shape[0]             # <<<<<<<<<<<<<<
@@ -2164,7 +2160,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_r = (__pyx_v_ary->dimensions[0]);
 
-  /* "opencvsample.pyx":17
+  /* "pymynt.pyx":17
  *     cdef unsigned int* im_buff = <unsigned int*> np_buff.data
  *     cdef int r = ary.shape[0]
  *     cdef int c = ary.shape[1]             # <<<<<<<<<<<<<<
@@ -2173,7 +2169,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_c = (__pyx_v_ary->dimensions[1]);
 
-  /* "opencvsample.pyx":19
+  /* "pymynt.pyx":19
  *     cdef int c = ary.shape[1]
  *     cdef Mat m
  *     m.create(r, c, CV_8UC3)             # <<<<<<<<<<<<<<
@@ -2182,7 +2178,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_m.create(__pyx_v_r, __pyx_v_c, CV_8UC3);
 
-  /* "opencvsample.pyx":20
+  /* "pymynt.pyx":20
  *     cdef Mat m
  *     m.create(r, c, CV_8UC3)
  *     memcpy(m.data, im_buff, r*c*3)             # <<<<<<<<<<<<<<
@@ -2191,7 +2187,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
  */
   (void)(memcpy(__pyx_v_m.data, __pyx_v_im_buff, ((__pyx_v_r * __pyx_v_c) * 3)));
 
-  /* "opencvsample.pyx":21
+  /* "pymynt.pyx":21
  *     m.create(r, c, CV_8UC3)
  *     memcpy(m.data, im_buff, r*c*3)
  *     return m             # <<<<<<<<<<<<<<
@@ -2201,7 +2197,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
   __pyx_r = __pyx_v_m;
   goto __pyx_L0;
 
-  /* "opencvsample.pyx":10
+  /* "pymynt.pyx":10
  * ###########################################
  * 
  * cdef Mat np2Mat3D(np.ndarray ary):             # <<<<<<<<<<<<<<
@@ -2223,7 +2219,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_np_buff.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_WriteUnraisable("opencvsample.np2Mat3D", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("pymynt.np2Mat3D", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __Pyx_pretend_to_initialize(&__pyx_r);
   goto __pyx_L2;
   __pyx_L0:;
@@ -2235,7 +2231,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":23
+/* "pymynt.pyx":23
  *     return m
  * 
  * cdef Mat np2Mat2D(np.ndarray ary):             # <<<<<<<<<<<<<<
@@ -2243,7 +2239,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat3D(PyArrayObject *__pyx_v_ary) {
  * 
  */
 
-static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
+static cv::Mat __pyx_f_6pymynt_np2Mat2D(PyArrayObject *__pyx_v_ary) {
   PyArrayObject *__pyx_v_np_buff = 0;
   unsigned int *__pyx_v_im_buff;
   int __pyx_v_r;
@@ -2265,7 +2261,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
   __pyx_pybuffernd_np_buff.data = NULL;
   __pyx_pybuffernd_np_buff.rcbuffer = &__pyx_pybuffer_np_buff;
 
-  /* "opencvsample.pyx":24
+  /* "pymynt.pyx":24
  * 
  * cdef Mat np2Mat2D(np.ndarray ary):
  *     assert ary.ndim==2 , "ASSERT::1 channel grayscale only!!"             # <<<<<<<<<<<<<<
@@ -2281,7 +2277,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
   }
   #endif
 
-  /* "opencvsample.pyx":26
+  /* "pymynt.pyx":26
  *     assert ary.ndim==2 , "ASSERT::1 channel grayscale only!!"
  * 
  *     cdef np.ndarray[np.uint8_t, ndim=2, mode ='c'] np_buff = np.ascontiguousarray(ary, dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -2326,7 +2322,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
   __pyx_v_np_buff = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "opencvsample.pyx":27
+  /* "pymynt.pyx":27
  * 
  *     cdef np.ndarray[np.uint8_t, ndim=2, mode ='c'] np_buff = np.ascontiguousarray(ary, dtype=np.uint8)
  *     cdef unsigned int* im_buff = <unsigned int*> np_buff.data             # <<<<<<<<<<<<<<
@@ -2335,7 +2331,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_im_buff = ((unsigned int *)__pyx_v_np_buff->data);
 
-  /* "opencvsample.pyx":28
+  /* "pymynt.pyx":28
  *     cdef np.ndarray[np.uint8_t, ndim=2, mode ='c'] np_buff = np.ascontiguousarray(ary, dtype=np.uint8)
  *     cdef unsigned int* im_buff = <unsigned int*> np_buff.data
  *     cdef int r = ary.shape[0]             # <<<<<<<<<<<<<<
@@ -2344,7 +2340,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_r = (__pyx_v_ary->dimensions[0]);
 
-  /* "opencvsample.pyx":29
+  /* "pymynt.pyx":29
  *     cdef unsigned int* im_buff = <unsigned int*> np_buff.data
  *     cdef int r = ary.shape[0]
  *     cdef int c = ary.shape[1]             # <<<<<<<<<<<<<<
@@ -2353,7 +2349,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_c = (__pyx_v_ary->dimensions[1]);
 
-  /* "opencvsample.pyx":31
+  /* "pymynt.pyx":31
  *     cdef int c = ary.shape[1]
  *     cdef Mat m
  *     m.create(r, c, CV_8UC1)             # <<<<<<<<<<<<<<
@@ -2362,7 +2358,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_m.create(__pyx_v_r, __pyx_v_c, CV_8UC1);
 
-  /* "opencvsample.pyx":32
+  /* "pymynt.pyx":32
  *     cdef Mat m
  *     m.create(r, c, CV_8UC1)
  *     memcpy(m.data, im_buff, r*c)             # <<<<<<<<<<<<<<
@@ -2371,7 +2367,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
  */
   (void)(memcpy(__pyx_v_m.data, __pyx_v_im_buff, (__pyx_v_r * __pyx_v_c)));
 
-  /* "opencvsample.pyx":33
+  /* "pymynt.pyx":33
  *     m.create(r, c, CV_8UC1)
  *     memcpy(m.data, im_buff, r*c)
  *     return m             # <<<<<<<<<<<<<<
@@ -2381,7 +2377,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
   __pyx_r = __pyx_v_m;
   goto __pyx_L0;
 
-  /* "opencvsample.pyx":23
+  /* "pymynt.pyx":23
  *     return m
  * 
  * cdef Mat np2Mat2D(np.ndarray ary):             # <<<<<<<<<<<<<<
@@ -2402,7 +2398,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_np_buff.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_WriteUnraisable("opencvsample.np2Mat2D", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("pymynt.np2Mat2D", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __Pyx_pretend_to_initialize(&__pyx_r);
   goto __pyx_L2;
   __pyx_L0:;
@@ -2413,7 +2409,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":35
+/* "pymynt.pyx":35
  *     return m
  * 
  * cdef Mat np2Mat2D_F32(np.ndarray ary):             # <<<<<<<<<<<<<<
@@ -2421,7 +2417,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D(PyArrayObject *__pyx_v_ary) {
  *     assert ary.dtype==np.float32, "ASSERT dtype=float32"
  */
 
-static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
+static cv::Mat __pyx_f_6pymynt_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
   PyArrayObject *__pyx_v_np_buff = 0;
   float *__pyx_v_im_buff;
   int __pyx_v_r;
@@ -2444,7 +2440,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
   __pyx_pybuffernd_np_buff.data = NULL;
   __pyx_pybuffernd_np_buff.rcbuffer = &__pyx_pybuffer_np_buff;
 
-  /* "opencvsample.pyx":36
+  /* "pymynt.pyx":36
  * 
  * cdef Mat np2Mat2D_F32(np.ndarray ary):
  *     assert ary.ndim==2 , "ASSERT::1 channel grayscale only!!"             # <<<<<<<<<<<<<<
@@ -2460,7 +2456,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
   }
   #endif
 
-  /* "opencvsample.pyx":37
+  /* "pymynt.pyx":37
  * cdef Mat np2Mat2D_F32(np.ndarray ary):
  *     assert ary.ndim==2 , "ASSERT::1 channel grayscale only!!"
  *     assert ary.dtype==np.float32, "ASSERT dtype=float32"             # <<<<<<<<<<<<<<
@@ -2488,7 +2484,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
   }
   #endif
 
-  /* "opencvsample.pyx":39
+  /* "pymynt.pyx":39
  *     assert ary.dtype==np.float32, "ASSERT dtype=float32"
  * 
  *     cdef np.ndarray[np.float32_t, ndim=2, mode ='c'] np_buff = np.ascontiguousarray(ary, dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -2533,7 +2529,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
   __pyx_v_np_buff = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "opencvsample.pyx":40
+  /* "pymynt.pyx":40
  * 
  *     cdef np.ndarray[np.float32_t, ndim=2, mode ='c'] np_buff = np.ascontiguousarray(ary, dtype=np.float32)
  *     cdef float* im_buff = <float*> np_buff.data             # <<<<<<<<<<<<<<
@@ -2542,7 +2538,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_im_buff = ((float *)__pyx_v_np_buff->data);
 
-  /* "opencvsample.pyx":41
+  /* "pymynt.pyx":41
  *     cdef np.ndarray[np.float32_t, ndim=2, mode ='c'] np_buff = np.ascontiguousarray(ary, dtype=np.float32)
  *     cdef float* im_buff = <float*> np_buff.data
  *     cdef int r = ary.shape[0]             # <<<<<<<<<<<<<<
@@ -2551,7 +2547,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_r = (__pyx_v_ary->dimensions[0]);
 
-  /* "opencvsample.pyx":42
+  /* "pymynt.pyx":42
  *     cdef float* im_buff = <float*> np_buff.data
  *     cdef int r = ary.shape[0]
  *     cdef int c = ary.shape[1]             # <<<<<<<<<<<<<<
@@ -2560,7 +2556,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_c = (__pyx_v_ary->dimensions[1]);
 
-  /* "opencvsample.pyx":44
+  /* "pymynt.pyx":44
  *     cdef int c = ary.shape[1]
  *     cdef Mat m
  *     m.create(r, c, CV_32FC1)             # <<<<<<<<<<<<<<
@@ -2569,7 +2565,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
  */
   __pyx_v_m.create(__pyx_v_r, __pyx_v_c, CV_32FC1);
 
-  /* "opencvsample.pyx":45
+  /* "pymynt.pyx":45
  *     cdef Mat m
  *     m.create(r, c, CV_32FC1)
  *     memcpy(m.data, im_buff, r*c*sizeof(float)) # 4 is the size of             # <<<<<<<<<<<<<<
@@ -2578,7 +2574,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
  */
   (void)(memcpy(__pyx_v_m.data, __pyx_v_im_buff, ((__pyx_v_r * __pyx_v_c) * (sizeof(float)))));
 
-  /* "opencvsample.pyx":46
+  /* "pymynt.pyx":46
  *     m.create(r, c, CV_32FC1)
  *     memcpy(m.data, im_buff, r*c*sizeof(float)) # 4 is the size of
  *     return m             # <<<<<<<<<<<<<<
@@ -2588,7 +2584,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
   __pyx_r = __pyx_v_m;
   goto __pyx_L0;
 
-  /* "opencvsample.pyx":35
+  /* "pymynt.pyx":35
  *     return m
  * 
  * cdef Mat np2Mat2D_F32(np.ndarray ary):             # <<<<<<<<<<<<<<
@@ -2609,7 +2605,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_np_buff.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_WriteUnraisable("opencvsample.np2Mat2D_F32", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("pymynt.np2Mat2D_F32", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __Pyx_pretend_to_initialize(&__pyx_r);
   goto __pyx_L2;
   __pyx_L0:;
@@ -2620,7 +2616,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":48
+/* "pymynt.pyx":48
  *     return m
  * 
  * def npto32ftonp(nparr):             # <<<<<<<<<<<<<<
@@ -2629,20 +2625,20 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat2D_F32(PyArrayObject *__pyx_v_ary) {
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12opencvsample_1npto32ftonp(PyObject *__pyx_self, PyObject *__pyx_v_nparr); /*proto*/
-static PyMethodDef __pyx_mdef_12opencvsample_1npto32ftonp = {"npto32ftonp", (PyCFunction)__pyx_pw_12opencvsample_1npto32ftonp, METH_O, 0};
-static PyObject *__pyx_pw_12opencvsample_1npto32ftonp(PyObject *__pyx_self, PyObject *__pyx_v_nparr) {
+static PyObject *__pyx_pw_6pymynt_1npto32ftonp(PyObject *__pyx_self, PyObject *__pyx_v_nparr); /*proto*/
+static PyMethodDef __pyx_mdef_6pymynt_1npto32ftonp = {"npto32ftonp", (PyCFunction)__pyx_pw_6pymynt_1npto32ftonp, METH_O, 0};
+static PyObject *__pyx_pw_6pymynt_1npto32ftonp(PyObject *__pyx_self, PyObject *__pyx_v_nparr) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("npto32ftonp (wrapper)", 0);
-  __pyx_r = __pyx_pf_12opencvsample_npto32ftonp(__pyx_self, ((PyObject *)__pyx_v_nparr));
+  __pyx_r = __pyx_pf_6pymynt_npto32ftonp(__pyx_self, ((PyObject *)__pyx_v_nparr));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12opencvsample_npto32ftonp(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nparr) {
+static PyObject *__pyx_pf_6pymynt_npto32ftonp(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nparr) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2651,7 +2647,7 @@ static PyObject *__pyx_pf_12opencvsample_npto32ftonp(CYTHON_UNUSED PyObject *__p
   int __pyx_t_4;
   __Pyx_RefNannySetupContext("npto32ftonp", 0);
 
-  /* "opencvsample.pyx":49
+  /* "pymynt.pyx":49
  * 
  * def npto32ftonp(nparr):
  *     assert nparr.dtype == np.float32, "array dtype must be float32"             # <<<<<<<<<<<<<<
@@ -2679,7 +2675,7 @@ static PyObject *__pyx_pf_12opencvsample_npto32ftonp(CYTHON_UNUSED PyObject *__p
   }
   #endif
 
-  /* "opencvsample.pyx":50
+  /* "pymynt.pyx":50
  * def npto32ftonp(nparr):
  *     assert nparr.dtype == np.float32, "array dtype must be float32"
  *     return Mat2np(np2Mat2D_F32(nparr))             # <<<<<<<<<<<<<<
@@ -2688,13 +2684,13 @@ static PyObject *__pyx_pf_12opencvsample_npto32ftonp(CYTHON_UNUSED PyObject *__p
  */
   __Pyx_XDECREF(__pyx_r);
   if (!(likely(((__pyx_v_nparr) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_nparr, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 50, __pyx_L1_error)
-  __pyx_t_2 = __pyx_f_12opencvsample_Mat2np(__pyx_f_12opencvsample_np2Mat2D_F32(((PyArrayObject *)__pyx_v_nparr))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_t_2 = __pyx_f_6pymynt_Mat2np(__pyx_f_6pymynt_np2Mat2D_F32(((PyArrayObject *)__pyx_v_nparr))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "opencvsample.pyx":48
+  /* "pymynt.pyx":48
  *     return m
  * 
  * def npto32ftonp(nparr):             # <<<<<<<<<<<<<<
@@ -2707,7 +2703,7 @@ static PyObject *__pyx_pf_12opencvsample_npto32ftonp(CYTHON_UNUSED PyObject *__p
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("opencvsample.npto32ftonp", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.npto32ftonp", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2715,7 +2711,7 @@ static PyObject *__pyx_pf_12opencvsample_npto32ftonp(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":52
+/* "pymynt.pyx":52
  *     return Mat2np(np2Mat2D_F32(nparr))
  * 
  * cdef Mat np2Mat(np.ndarray ary):             # <<<<<<<<<<<<<<
@@ -2723,7 +2719,7 @@ static PyObject *__pyx_pf_12opencvsample_npto32ftonp(CYTHON_UNUSED PyObject *__p
  *     if ary.ndim == 2:
  */
 
-static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
+static cv::Mat __pyx_f_6pymynt_np2Mat(PyArrayObject *__pyx_v_ary) {
   cv::Mat __pyx_v_out;
   cv::Mat __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -2733,7 +2729,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
   int __pyx_t_4;
   __Pyx_RefNannySetupContext("np2Mat", 0);
 
-  /* "opencvsample.pyx":54
+  /* "pymynt.pyx":54
  * cdef Mat np2Mat(np.ndarray ary):
  *     cdef Mat out
  *     if ary.ndim == 2:             # <<<<<<<<<<<<<<
@@ -2743,7 +2739,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
   switch (__pyx_v_ary->nd) {
     case 2:
 
-    /* "opencvsample.pyx":55
+    /* "pymynt.pyx":55
  *     cdef Mat out
  *     if ary.ndim == 2:
  *         if ary.dtype == np.float32:             # <<<<<<<<<<<<<<
@@ -2764,16 +2760,16 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_4) {
 
-      /* "opencvsample.pyx":56
+      /* "pymynt.pyx":56
  *     if ary.ndim == 2:
  *         if ary.dtype == np.float32:
  *             out = np2Mat2D_F32(ary)             # <<<<<<<<<<<<<<
  *         elif ary.dtype == np.uint8:
  *             out = np2Mat2D(ary)
  */
-      __pyx_v_out = __pyx_f_12opencvsample_np2Mat2D_F32(__pyx_v_ary);
+      __pyx_v_out = __pyx_f_6pymynt_np2Mat2D_F32(__pyx_v_ary);
 
-      /* "opencvsample.pyx":55
+      /* "pymynt.pyx":55
  *     cdef Mat out
  *     if ary.ndim == 2:
  *         if ary.dtype == np.float32:             # <<<<<<<<<<<<<<
@@ -2783,7 +2779,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
       goto __pyx_L3;
     }
 
-    /* "opencvsample.pyx":57
+    /* "pymynt.pyx":57
  *         if ary.dtype == np.float32:
  *             out = np2Mat2D_F32(ary)
  *         elif ary.dtype == np.uint8:             # <<<<<<<<<<<<<<
@@ -2804,16 +2800,16 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (likely(__pyx_t_4)) {
 
-      /* "opencvsample.pyx":58
+      /* "pymynt.pyx":58
  *             out = np2Mat2D_F32(ary)
  *         elif ary.dtype == np.uint8:
  *             out = np2Mat2D(ary)             # <<<<<<<<<<<<<<
  *         else:
  *             raise TypeError("array data type is not valid")
  */
-      __pyx_v_out = __pyx_f_12opencvsample_np2Mat2D(__pyx_v_ary);
+      __pyx_v_out = __pyx_f_6pymynt_np2Mat2D(__pyx_v_ary);
 
-      /* "opencvsample.pyx":57
+      /* "pymynt.pyx":57
  *         if ary.dtype == np.float32:
  *             out = np2Mat2D_F32(ary)
  *         elif ary.dtype == np.uint8:             # <<<<<<<<<<<<<<
@@ -2823,7 +2819,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
       goto __pyx_L3;
     }
 
-    /* "opencvsample.pyx":60
+    /* "pymynt.pyx":60
  *             out = np2Mat2D(ary)
  *         else:
  *             raise TypeError("array data type is not valid")             # <<<<<<<<<<<<<<
@@ -2839,7 +2835,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
     }
     __pyx_L3:;
 
-    /* "opencvsample.pyx":54
+    /* "pymynt.pyx":54
  * cdef Mat np2Mat(np.ndarray ary):
  *     cdef Mat out
  *     if ary.ndim == 2:             # <<<<<<<<<<<<<<
@@ -2849,16 +2845,16 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
     break;
     case 3:
 
-    /* "opencvsample.pyx":62
+    /* "pymynt.pyx":62
  *             raise TypeError("array data type is not valid")
  *     elif ary.ndim == 3:
  *         out = np2Mat3D(ary)             # <<<<<<<<<<<<<<
  *     return out
  * 
  */
-    __pyx_v_out = __pyx_f_12opencvsample_np2Mat3D(__pyx_v_ary);
+    __pyx_v_out = __pyx_f_6pymynt_np2Mat3D(__pyx_v_ary);
 
-    /* "opencvsample.pyx":61
+    /* "pymynt.pyx":61
  *         else:
  *             raise TypeError("array data type is not valid")
  *     elif ary.ndim == 3:             # <<<<<<<<<<<<<<
@@ -2869,7 +2865,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
     default: break;
   }
 
-  /* "opencvsample.pyx":63
+  /* "pymynt.pyx":63
  *     elif ary.ndim == 3:
  *         out = np2Mat3D(ary)
  *     return out             # <<<<<<<<<<<<<<
@@ -2879,7 +2875,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
   __pyx_r = __pyx_v_out;
   goto __pyx_L0;
 
-  /* "opencvsample.pyx":52
+  /* "pymynt.pyx":52
  *     return Mat2np(np2Mat2D_F32(nparr))
  * 
  * cdef Mat np2Mat(np.ndarray ary):             # <<<<<<<<<<<<<<
@@ -2892,14 +2888,14 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_WriteUnraisable("opencvsample.np2Mat", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("pymynt.np2Mat", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __Pyx_pretend_to_initialize(&__pyx_r);
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":66
+/* "pymynt.pyx":66
  * 
  * 
  * cdef object Mat2np(Mat m):             # <<<<<<<<<<<<<<
@@ -2907,7 +2903,7 @@ static cv::Mat __pyx_f_12opencvsample_np2Mat(PyArrayObject *__pyx_v_ary) {
  *     cdef Py_buffer buf_info
  */
 
-static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
+static PyObject *__pyx_f_6pymynt_Mat2np(cv::Mat __pyx_v_m) {
   Py_buffer __pyx_v_buf_info;
   size_t __pyx_v_len;
   PyObject *__pyx_v_Pydata = NULL;
@@ -2925,7 +2921,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("Mat2np", 0);
 
-  /* "opencvsample.pyx":70
+  /* "pymynt.pyx":70
  *     cdef Py_buffer buf_info
  *     # Define the size / len of data
  *     cdef size_t len = m.rows*m.cols*m.elemSize()#m.channels()*sizeof(CV_8UC3)             # <<<<<<<<<<<<<<
@@ -2934,7 +2930,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
  */
   __pyx_v_len = ((__pyx_v_m.rows * __pyx_v_m.cols) * __pyx_v_m.elemSize());
 
-  /* "opencvsample.pyx":72
+  /* "pymynt.pyx":72
  *     cdef size_t len = m.rows*m.cols*m.elemSize()#m.channels()*sizeof(CV_8UC3)
  *     # Fill buffer
  *     PyBuffer_FillInfo(&buf_info, NULL, m.data, len, 1, PyBUF_FULL_RO)             # <<<<<<<<<<<<<<
@@ -2943,7 +2939,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
  */
   (void)(PyBuffer_FillInfo((&__pyx_v_buf_info), NULL, __pyx_v_m.data, __pyx_v_len, 1, PyBUF_FULL_RO));
 
-  /* "opencvsample.pyx":74
+  /* "pymynt.pyx":74
  *     PyBuffer_FillInfo(&buf_info, NULL, m.data, len, 1, PyBUF_FULL_RO)
  *     # Get Pyobject from buffer data
  *     Pydata  = PyMemoryView_FromBuffer(&buf_info)             # <<<<<<<<<<<<<<
@@ -2955,7 +2951,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   __pyx_v_Pydata = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":78
+  /* "pymynt.pyx":78
  *     # Create ndarray with data
  *     # the dimension of the output array is 2 if the image is grayscale
  *     if m.channels() >1 :             # <<<<<<<<<<<<<<
@@ -2965,7 +2961,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   __pyx_t_2 = ((__pyx_v_m.channels() > 1) != 0);
   if (__pyx_t_2) {
 
-    /* "opencvsample.pyx":79
+    /* "pymynt.pyx":79
  *     # the dimension of the output array is 2 if the image is grayscale
  *     if m.channels() >1 :
  *         shape_array = (m.rows, m.cols, m.channels())             # <<<<<<<<<<<<<<
@@ -2992,7 +2988,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
     __pyx_v_shape_array = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "opencvsample.pyx":78
+    /* "pymynt.pyx":78
  *     # Create ndarray with data
  *     # the dimension of the output array is 2 if the image is grayscale
  *     if m.channels() >1 :             # <<<<<<<<<<<<<<
@@ -3002,7 +2998,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
     goto __pyx_L3;
   }
 
-  /* "opencvsample.pyx":81
+  /* "pymynt.pyx":81
  *         shape_array = (m.rows, m.cols, m.channels())
  *     else:
  *         shape_array = (m.rows, m.cols)             # <<<<<<<<<<<<<<
@@ -3027,7 +3023,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   }
   __pyx_L3:;
 
-  /* "opencvsample.pyx":83
+  /* "pymynt.pyx":83
  *         shape_array = (m.rows, m.cols)
  * 
  *     if m.depth() == CV_32F :             # <<<<<<<<<<<<<<
@@ -3037,7 +3033,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   __pyx_t_2 = ((__pyx_v_m.depth() == CV_32F) != 0);
   if (__pyx_t_2) {
 
-    /* "opencvsample.pyx":84
+    /* "pymynt.pyx":84
  * 
  *     if m.depth() == CV_32F :
  *         ary = np.ndarray(shape=shape_array, buffer=Pydata, order='c', dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -3062,7 +3058,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
     __pyx_v_ary = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "opencvsample.pyx":83
+    /* "pymynt.pyx":83
  *         shape_array = (m.rows, m.cols)
  * 
  *     if m.depth() == CV_32F :             # <<<<<<<<<<<<<<
@@ -3072,7 +3068,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
     goto __pyx_L4;
   }
 
-  /* "opencvsample.pyx":87
+  /* "pymynt.pyx":87
  *     else :
  *     #8-bit image
  *         ary = np.ndarray(shape=shape_array, buffer=Pydata, order='c', dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -3100,7 +3096,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   }
   __pyx_L4:;
 
-  /* "opencvsample.pyx":89
+  /* "pymynt.pyx":89
  *         ary = np.ndarray(shape=shape_array, buffer=Pydata, order='c', dtype=np.uint8)
  * 
  *     if m.channels() == 3:             # <<<<<<<<<<<<<<
@@ -3110,7 +3106,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   __pyx_t_2 = ((__pyx_v_m.channels() == 3) != 0);
   if (__pyx_t_2) {
 
-    /* "opencvsample.pyx":91
+    /* "pymynt.pyx":91
  *     if m.channels() == 3:
  *         # BGR -> RGB
  *         ary = np.dstack((ary[...,2], ary[...,1], ary[...,0]))             # <<<<<<<<<<<<<<
@@ -3158,7 +3154,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
     __Pyx_DECREF_SET(__pyx_v_ary, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "opencvsample.pyx":89
+    /* "pymynt.pyx":89
  *         ary = np.ndarray(shape=shape_array, buffer=Pydata, order='c', dtype=np.uint8)
  * 
  *     if m.channels() == 3:             # <<<<<<<<<<<<<<
@@ -3167,7 +3163,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
  */
   }
 
-  /* "opencvsample.pyx":94
+  /* "pymynt.pyx":94
  * 
  *     # Convert to numpy array
  *     pyarr = np.asarray(ary)             # <<<<<<<<<<<<<<
@@ -3197,7 +3193,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   __pyx_v_pyarr = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "opencvsample.pyx":95
+  /* "pymynt.pyx":95
  *     # Convert to numpy array
  *     pyarr = np.asarray(ary)
  *     return pyarr             # <<<<<<<<<<<<<<
@@ -3209,7 +3205,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   __pyx_r = __pyx_v_pyarr;
   goto __pyx_L0;
 
-  /* "opencvsample.pyx":66
+  /* "pymynt.pyx":66
  * 
  * 
  * cdef object Mat2np(Mat m):             # <<<<<<<<<<<<<<
@@ -3225,7 +3221,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("opencvsample.Mat2np", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.Mat2np", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Pydata);
@@ -3237,7 +3233,7 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":98
+/* "pymynt.pyx":98
  * 
  * 
  * def np2Mat2np(nparray):             # <<<<<<<<<<<<<<
@@ -3246,20 +3242,20 @@ static PyObject *__pyx_f_12opencvsample_Mat2np(cv::Mat __pyx_v_m) {
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12opencvsample_3np2Mat2np(PyObject *__pyx_self, PyObject *__pyx_v_nparray); /*proto*/
-static PyMethodDef __pyx_mdef_12opencvsample_3np2Mat2np = {"np2Mat2np", (PyCFunction)__pyx_pw_12opencvsample_3np2Mat2np, METH_O, 0};
-static PyObject *__pyx_pw_12opencvsample_3np2Mat2np(PyObject *__pyx_self, PyObject *__pyx_v_nparray) {
+static PyObject *__pyx_pw_6pymynt_3np2Mat2np(PyObject *__pyx_self, PyObject *__pyx_v_nparray); /*proto*/
+static PyMethodDef __pyx_mdef_6pymynt_3np2Mat2np = {"np2Mat2np", (PyCFunction)__pyx_pw_6pymynt_3np2Mat2np, METH_O, 0};
+static PyObject *__pyx_pw_6pymynt_3np2Mat2np(PyObject *__pyx_self, PyObject *__pyx_v_nparray) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("np2Mat2np (wrapper)", 0);
-  __pyx_r = __pyx_pf_12opencvsample_2np2Mat2np(__pyx_self, ((PyObject *)__pyx_v_nparray));
+  __pyx_r = __pyx_pf_6pymynt_2np2Mat2np(__pyx_self, ((PyObject *)__pyx_v_nparray));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12opencvsample_2np2Mat2np(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nparray) {
+static PyObject *__pyx_pf_6pymynt_2np2Mat2np(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nparray) {
   cv::Mat __pyx_v_m;
   PyObject *__pyx_v_pyarr = NULL;
   PyObject *__pyx_r = NULL;
@@ -3267,7 +3263,7 @@ static PyObject *__pyx_pf_12opencvsample_2np2Mat2np(CYTHON_UNUSED PyObject *__py
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("np2Mat2np", 0);
 
-  /* "opencvsample.pyx":102
+  /* "pymynt.pyx":102
  * 
  *     # Convert numpy array to cv::Mat
  *     m = np2Mat(nparray)             # <<<<<<<<<<<<<<
@@ -3275,21 +3271,21 @@ static PyObject *__pyx_pf_12opencvsample_2np2Mat2np(CYTHON_UNUSED PyObject *__py
  *     # Convert cv::Mat to numpy array
  */
   if (!(likely(((__pyx_v_nparray) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_nparray, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 102, __pyx_L1_error)
-  __pyx_v_m = __pyx_f_12opencvsample_np2Mat(((PyArrayObject *)__pyx_v_nparray));
+  __pyx_v_m = __pyx_f_6pymynt_np2Mat(((PyArrayObject *)__pyx_v_nparray));
 
-  /* "opencvsample.pyx":105
+  /* "pymynt.pyx":105
  * 
  *     # Convert cv::Mat to numpy array
  *     pyarr = Mat2np(m)             # <<<<<<<<<<<<<<
  * 
  *     return pyarr
  */
-  __pyx_t_1 = __pyx_f_12opencvsample_Mat2np(__pyx_v_m); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6pymynt_Mat2np(__pyx_v_m); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_pyarr = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":107
+  /* "pymynt.pyx":107
  *     pyarr = Mat2np(m)
  * 
  *     return pyarr             # <<<<<<<<<<<<<<
@@ -3301,7 +3297,7 @@ static PyObject *__pyx_pf_12opencvsample_2np2Mat2np(CYTHON_UNUSED PyObject *__py
   __pyx_r = __pyx_v_pyarr;
   goto __pyx_L0;
 
-  /* "opencvsample.pyx":98
+  /* "pymynt.pyx":98
  * 
  * 
  * def np2Mat2np(nparray):             # <<<<<<<<<<<<<<
@@ -3312,7 +3308,7 @@ static PyObject *__pyx_pf_12opencvsample_2np2Mat2np(CYTHON_UNUSED PyObject *__py
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("opencvsample.np2Mat2np", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.np2Mat2np", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_pyarr);
@@ -3321,7 +3317,7 @@ static PyObject *__pyx_pf_12opencvsample_2np2Mat2np(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":113
+/* "pymynt.pyx":113
  *     cdef Mat mat
  * 
  *     def __cinit__(self, np_mat):             # <<<<<<<<<<<<<<
@@ -3330,8 +3326,8 @@ static PyObject *__pyx_pf_12opencvsample_2np2Mat2np(CYTHON_UNUSED PyObject *__py
  */
 
 /* Python wrapper */
-static int __pyx_pw_12opencvsample_5PyMat_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_12opencvsample_5PyMat_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_6pymynt_5PyMat_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_6pymynt_5PyMat_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_np_mat = 0;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -3368,23 +3364,23 @@ static int __pyx_pw_12opencvsample_5PyMat_1__cinit__(PyObject *__pyx_v_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 113, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("opencvsample.PyMat.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.PyMat.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12opencvsample_5PyMat___cinit__(((struct __pyx_obj_12opencvsample_PyMat *)__pyx_v_self), __pyx_v_np_mat);
+  __pyx_r = __pyx_pf_6pymynt_5PyMat___cinit__(((struct __pyx_obj_6pymynt_PyMat *)__pyx_v_self), __pyx_v_np_mat);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_12opencvsample_5PyMat___cinit__(struct __pyx_obj_12opencvsample_PyMat *__pyx_v_self, PyObject *__pyx_v_np_mat) {
+static int __pyx_pf_6pymynt_5PyMat___cinit__(struct __pyx_obj_6pymynt_PyMat *__pyx_v_self, PyObject *__pyx_v_np_mat) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "opencvsample.pyx":114
+  /* "pymynt.pyx":114
  * 
  *     def __cinit__(self, np_mat):
  *         self.mat = np2Mat(np_mat)             # <<<<<<<<<<<<<<
@@ -3392,9 +3388,9 @@ static int __pyx_pf_12opencvsample_5PyMat___cinit__(struct __pyx_obj_12opencvsam
  *     def get_mat(self):
  */
   if (!(likely(((__pyx_v_np_mat) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_np_mat, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 114, __pyx_L1_error)
-  __pyx_v_self->mat = __pyx_f_12opencvsample_np2Mat(((PyArrayObject *)__pyx_v_np_mat));
+  __pyx_v_self->mat = __pyx_f_6pymynt_np2Mat(((PyArrayObject *)__pyx_v_np_mat));
 
-  /* "opencvsample.pyx":113
+  /* "pymynt.pyx":113
  *     cdef Mat mat
  * 
  *     def __cinit__(self, np_mat):             # <<<<<<<<<<<<<<
@@ -3406,14 +3402,14 @@ static int __pyx_pf_12opencvsample_5PyMat___cinit__(struct __pyx_obj_12opencvsam
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("opencvsample.PyMat.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.PyMat.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":116
+/* "pymynt.pyx":116
  *         self.mat = np2Mat(np_mat)
  * 
  *     def get_mat(self):             # <<<<<<<<<<<<<<
@@ -3422,25 +3418,25 @@ static int __pyx_pf_12opencvsample_5PyMat___cinit__(struct __pyx_obj_12opencvsam
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12opencvsample_5PyMat_3get_mat(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_12opencvsample_5PyMat_3get_mat(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pymynt_5PyMat_3get_mat(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_6pymynt_5PyMat_3get_mat(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_mat (wrapper)", 0);
-  __pyx_r = __pyx_pf_12opencvsample_5PyMat_2get_mat(((struct __pyx_obj_12opencvsample_PyMat *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pymynt_5PyMat_2get_mat(((struct __pyx_obj_6pymynt_PyMat *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12opencvsample_5PyMat_2get_mat(struct __pyx_obj_12opencvsample_PyMat *__pyx_v_self) {
+static PyObject *__pyx_pf_6pymynt_5PyMat_2get_mat(struct __pyx_obj_6pymynt_PyMat *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("get_mat", 0);
 
-  /* "opencvsample.pyx":117
+  /* "pymynt.pyx":117
  * 
  *     def get_mat(self):
  *         return Mat2np(self.mat)             # <<<<<<<<<<<<<<
@@ -3448,13 +3444,13 @@ static PyObject *__pyx_pf_12opencvsample_5PyMat_2get_mat(struct __pyx_obj_12open
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_12opencvsample_Mat2np(__pyx_v_self->mat); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6pymynt_Mat2np(__pyx_v_self->mat); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "opencvsample.pyx":116
+  /* "pymynt.pyx":116
  *         self.mat = np2Mat(np_mat)
  * 
  *     def get_mat(self):             # <<<<<<<<<<<<<<
@@ -3465,7 +3461,7 @@ static PyObject *__pyx_pf_12opencvsample_5PyMat_2get_mat(struct __pyx_obj_12open
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("opencvsample.PyMat.get_mat", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.PyMat.get_mat", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3480,19 +3476,19 @@ static PyObject *__pyx_pf_12opencvsample_5PyMat_2get_mat(struct __pyx_obj_12open
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12opencvsample_5PyMat_5__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_12opencvsample_5PyMat_5__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pymynt_5PyMat_5__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_6pymynt_5PyMat_5__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_12opencvsample_5PyMat_4__reduce_cython__(((struct __pyx_obj_12opencvsample_PyMat *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pymynt_5PyMat_4__reduce_cython__(((struct __pyx_obj_6pymynt_PyMat *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12opencvsample_5PyMat_4__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_12opencvsample_PyMat *__pyx_v_self) {
+static PyObject *__pyx_pf_6pymynt_5PyMat_4__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_6pymynt_PyMat *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3519,7 +3515,7 @@ static PyObject *__pyx_pf_12opencvsample_5PyMat_4__reduce_cython__(CYTHON_UNUSED
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("opencvsample.PyMat.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.PyMat.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -3534,19 +3530,19 @@ static PyObject *__pyx_pf_12opencvsample_5PyMat_4__reduce_cython__(CYTHON_UNUSED
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12opencvsample_5PyMat_7__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_12opencvsample_5PyMat_7__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_6pymynt_5PyMat_7__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_6pymynt_5PyMat_7__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_12opencvsample_5PyMat_6__setstate_cython__(((struct __pyx_obj_12opencvsample_PyMat *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_6pymynt_5PyMat_6__setstate_cython__(((struct __pyx_obj_6pymynt_PyMat *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12opencvsample_5PyMat_6__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_12opencvsample_PyMat *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_6pymynt_5PyMat_6__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_6pymynt_PyMat *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3573,14 +3569,14 @@ static PyObject *__pyx_pf_12opencvsample_5PyMat_6__setstate_cython__(CYTHON_UNUS
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("opencvsample.PyMat.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.PyMat.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":148
+/* "pymynt.pyx":148
  * 
  * 
  * cdef showMat(Mat m):             # <<<<<<<<<<<<<<
@@ -3588,7 +3584,7 @@ static PyObject *__pyx_pf_12opencvsample_5PyMat_6__setstate_cython__(CYTHON_UNUS
  *   namedWindow(windowname, CV_WINDOW_AUTOSIZE )
  */
 
-static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat __pyx_v_m) {
+static PyObject *__pyx_f_6pymynt_showMat(cv::Mat __pyx_v_m) {
   PyObject *__pyx_v_windowname = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3598,7 +3594,7 @@ static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat __pyx_v_m) {
   std::string __pyx_t_4;
   __Pyx_RefNannySetupContext("showMat", 0);
 
-  /* "opencvsample.pyx":149
+  /* "pymynt.pyx":149
  * 
  * cdef showMat(Mat m):
  *   windowname = "123".encode('UTF-8')             # <<<<<<<<<<<<<<
@@ -3625,7 +3621,7 @@ static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat __pyx_v_m) {
   __pyx_v_windowname = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":150
+  /* "pymynt.pyx":150
  * cdef showMat(Mat m):
  *   windowname = "123".encode('UTF-8')
  *   namedWindow(windowname, CV_WINDOW_AUTOSIZE )             # <<<<<<<<<<<<<<
@@ -3635,7 +3631,7 @@ static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat __pyx_v_m) {
   __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_v_windowname); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 150, __pyx_L1_error)
   cv::namedWindow(__pyx_t_4, CV_WINDOW_AUTOSIZE);
 
-  /* "opencvsample.pyx":151
+  /* "pymynt.pyx":151
  *   windowname = "123".encode('UTF-8')
  *   namedWindow(windowname, CV_WINDOW_AUTOSIZE )
  *   imshow(windowname, m)             # <<<<<<<<<<<<<<
@@ -3645,7 +3641,7 @@ static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat __pyx_v_m) {
   __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_v_windowname); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 151, __pyx_L1_error)
   cv::imshow(__pyx_t_4, __pyx_v_m);
 
-  /* "opencvsample.pyx":152
+  /* "pymynt.pyx":152
  *   namedWindow(windowname, CV_WINDOW_AUTOSIZE )
  *   imshow(windowname, m)
  *   waitKey(1000)             # <<<<<<<<<<<<<<
@@ -3654,7 +3650,7 @@ static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat __pyx_v_m) {
  */
   (void)(cv::waitKey(0x3E8));
 
-  /* "opencvsample.pyx":148
+  /* "pymynt.pyx":148
  * 
  * 
  * cdef showMat(Mat m):             # <<<<<<<<<<<<<<
@@ -3669,7 +3665,7 @@ static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat __pyx_v_m) {
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("opencvsample.showMat", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.showMat", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_windowname);
@@ -3678,7 +3674,7 @@ static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat __pyx_v_m) {
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":154
+/* "pymynt.pyx":154
  *   waitKey(1000)
  * 
  * def openImage(pil_img):             # <<<<<<<<<<<<<<
@@ -3687,20 +3683,20 @@ static PyObject *__pyx_f_12opencvsample_showMat(cv::Mat __pyx_v_m) {
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12opencvsample_5openImage(PyObject *__pyx_self, PyObject *__pyx_v_pil_img); /*proto*/
-static PyMethodDef __pyx_mdef_12opencvsample_5openImage = {"openImage", (PyCFunction)__pyx_pw_12opencvsample_5openImage, METH_O, 0};
-static PyObject *__pyx_pw_12opencvsample_5openImage(PyObject *__pyx_self, PyObject *__pyx_v_pil_img) {
+static PyObject *__pyx_pw_6pymynt_5openImage(PyObject *__pyx_self, PyObject *__pyx_v_pil_img); /*proto*/
+static PyMethodDef __pyx_mdef_6pymynt_5openImage = {"openImage", (PyCFunction)__pyx_pw_6pymynt_5openImage, METH_O, 0};
+static PyObject *__pyx_pw_6pymynt_5openImage(PyObject *__pyx_self, PyObject *__pyx_v_pil_img) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("openImage (wrapper)", 0);
-  __pyx_r = __pyx_pf_12opencvsample_4openImage(__pyx_self, ((PyObject *)__pyx_v_pil_img));
+  __pyx_r = __pyx_pf_6pymynt_4openImage(__pyx_self, ((PyObject *)__pyx_v_pil_img));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12opencvsample_4openImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pil_img) {
+static PyObject *__pyx_pf_6pymynt_4openImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pil_img) {
   cv::Mat __pyx_v_m;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3709,7 +3705,7 @@ static PyObject *__pyx_pf_12opencvsample_4openImage(CYTHON_UNUSED PyObject *__py
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("openImage", 0);
 
-  /* "opencvsample.pyx":156
+  /* "pymynt.pyx":156
  * def openImage(pil_img):
  *   cdef Mat m
  *   m = np2Mat(np.array(pil_img))             # <<<<<<<<<<<<<<
@@ -3737,21 +3733,21 @@ static PyObject *__pyx_pf_12opencvsample_4openImage(CYTHON_UNUSED PyObject *__py
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 156, __pyx_L1_error)
-  __pyx_v_m = __pyx_f_12opencvsample_np2Mat(((PyArrayObject *)__pyx_t_1));
+  __pyx_v_m = __pyx_f_6pymynt_np2Mat(((PyArrayObject *)__pyx_t_1));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":157
+  /* "pymynt.pyx":157
  *   cdef Mat m
  *   m = np2Mat(np.array(pil_img))
  *   showMat(m)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_1 = __pyx_f_12opencvsample_showMat(__pyx_v_m); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6pymynt_showMat(__pyx_v_m); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":154
+  /* "pymynt.pyx":154
  *   waitKey(1000)
  * 
  * def openImage(pil_img):             # <<<<<<<<<<<<<<
@@ -3766,7 +3762,7 @@ static PyObject *__pyx_pf_12opencvsample_4openImage(CYTHON_UNUSED PyObject *__py
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("opencvsample.openImage", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.openImage", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3774,7 +3770,7 @@ static PyObject *__pyx_pf_12opencvsample_4openImage(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":162
+/* "pymynt.pyx":162
  * ##########################################
  * 
  * def init_camera():             # <<<<<<<<<<<<<<
@@ -3783,25 +3779,25 @@ static PyObject *__pyx_pf_12opencvsample_4openImage(CYTHON_UNUSED PyObject *__py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12opencvsample_7init_camera(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_12opencvsample_7init_camera = {"init_camera", (PyCFunction)__pyx_pw_12opencvsample_7init_camera, METH_NOARGS, 0};
-static PyObject *__pyx_pw_12opencvsample_7init_camera(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pymynt_7init_camera(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_6pymynt_7init_camera = {"init_camera", (PyCFunction)__pyx_pw_6pymynt_7init_camera, METH_NOARGS, 0};
+static PyObject *__pyx_pw_6pymynt_7init_camera(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("init_camera (wrapper)", 0);
-  __pyx_r = __pyx_pf_12opencvsample_6init_camera(__pyx_self);
+  __pyx_r = __pyx_pf_6pymynt_6init_camera(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12opencvsample_6init_camera(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_6pymynt_6init_camera(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("init_camera", 0);
 
-  /* "opencvsample.pyx":163
+  /* "pymynt.pyx":163
  * 
  * def init_camera():
  *   init()             # <<<<<<<<<<<<<<
@@ -3810,7 +3806,7 @@ static PyObject *__pyx_pf_12opencvsample_6init_camera(CYTHON_UNUSED PyObject *__
  */
   (void)(init());
 
-  /* "opencvsample.pyx":162
+  /* "pymynt.pyx":162
  * ##########################################
  * 
  * def init_camera():             # <<<<<<<<<<<<<<
@@ -3825,7 +3821,7 @@ static PyObject *__pyx_pf_12opencvsample_6init_camera(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":165
+/* "pymynt.pyx":165
  *   init()
  * 
  * def get_depth_image():             # <<<<<<<<<<<<<<
@@ -3834,27 +3830,27 @@ static PyObject *__pyx_pf_12opencvsample_6init_camera(CYTHON_UNUSED PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12opencvsample_9get_depth_image(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_12opencvsample_9get_depth_image = {"get_depth_image", (PyCFunction)__pyx_pw_12opencvsample_9get_depth_image, METH_NOARGS, 0};
-static PyObject *__pyx_pw_12opencvsample_9get_depth_image(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pymynt_9get_depth_image(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_6pymynt_9get_depth_image = {"get_depth_image", (PyCFunction)__pyx_pw_6pymynt_9get_depth_image, METH_NOARGS, 0};
+static PyObject *__pyx_pw_6pymynt_9get_depth_image(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_depth_image (wrapper)", 0);
-  __pyx_r = __pyx_pf_12opencvsample_8get_depth_image(__pyx_self);
+  __pyx_r = __pyx_pf_6pymynt_8get_depth_image(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12opencvsample_8get_depth_image(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_6pymynt_8get_depth_image(CYTHON_UNUSED PyObject *__pyx_self) {
   cv::Mat __pyx_v_m;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("get_depth_image", 0);
 
-  /* "opencvsample.pyx":166
+  /* "pymynt.pyx":166
  * 
  * def get_depth_image():
  *   m = getDepthImage()             # <<<<<<<<<<<<<<
@@ -3863,7 +3859,7 @@ static PyObject *__pyx_pf_12opencvsample_8get_depth_image(CYTHON_UNUSED PyObject
  */
   __pyx_v_m = getDepthImage();
 
-  /* "opencvsample.pyx":167
+  /* "pymynt.pyx":167
  * def get_depth_image():
  *   m = getDepthImage()
  *   return Mat2np(m)             # <<<<<<<<<<<<<<
@@ -3871,13 +3867,13 @@ static PyObject *__pyx_pf_12opencvsample_8get_depth_image(CYTHON_UNUSED PyObject
  * def show_depth_image():
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_12opencvsample_Mat2np(__pyx_v_m); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6pymynt_Mat2np(__pyx_v_m); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "opencvsample.pyx":165
+  /* "pymynt.pyx":165
  *   init()
  * 
  * def get_depth_image():             # <<<<<<<<<<<<<<
@@ -3888,7 +3884,7 @@ static PyObject *__pyx_pf_12opencvsample_8get_depth_image(CYTHON_UNUSED PyObject
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("opencvsample.get_depth_image", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.get_depth_image", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3896,7 +3892,7 @@ static PyObject *__pyx_pf_12opencvsample_8get_depth_image(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "opencvsample.pyx":169
+/* "pymynt.pyx":169
  *   return Mat2np(m)
  * 
  * def show_depth_image():             # <<<<<<<<<<<<<<
@@ -3905,27 +3901,27 @@ static PyObject *__pyx_pf_12opencvsample_8get_depth_image(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12opencvsample_11show_depth_image(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_12opencvsample_11show_depth_image = {"show_depth_image", (PyCFunction)__pyx_pw_12opencvsample_11show_depth_image, METH_NOARGS, 0};
-static PyObject *__pyx_pw_12opencvsample_11show_depth_image(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pymynt_11show_depth_image(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_6pymynt_11show_depth_image = {"show_depth_image", (PyCFunction)__pyx_pw_6pymynt_11show_depth_image, METH_NOARGS, 0};
+static PyObject *__pyx_pw_6pymynt_11show_depth_image(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("show_depth_image (wrapper)", 0);
-  __pyx_r = __pyx_pf_12opencvsample_10show_depth_image(__pyx_self);
+  __pyx_r = __pyx_pf_6pymynt_10show_depth_image(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12opencvsample_10show_depth_image(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_6pymynt_10show_depth_image(CYTHON_UNUSED PyObject *__pyx_self) {
   cv::Mat __pyx_v_m;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("show_depth_image", 0);
 
-  /* "opencvsample.pyx":170
+  /* "pymynt.pyx":170
  * 
  * def show_depth_image():
  *   m = getDepthImage()             # <<<<<<<<<<<<<<
@@ -3933,16 +3929,16 @@ static PyObject *__pyx_pf_12opencvsample_10show_depth_image(CYTHON_UNUSED PyObje
  */
   __pyx_v_m = getDepthImage();
 
-  /* "opencvsample.pyx":171
+  /* "pymynt.pyx":171
  * def show_depth_image():
  *   m = getDepthImage()
  *   showMat(m)             # <<<<<<<<<<<<<<
  */
-  __pyx_t_1 = __pyx_f_12opencvsample_showMat(__pyx_v_m); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6pymynt_showMat(__pyx_v_m); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":169
+  /* "pymynt.pyx":169
  *   return Mat2np(m)
  * 
  * def show_depth_image():             # <<<<<<<<<<<<<<
@@ -3955,7 +3951,7 @@ static PyObject *__pyx_pf_12opencvsample_10show_depth_image(CYTHON_UNUSED PyObje
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("opencvsample.show_depth_image", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pymynt.show_depth_image", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -6443,8 +6439,8 @@ static std::string __pyx_convert_string_from_py_std__in_string(PyObject *__pyx_v
   return __pyx_r;
 }
 
-static PyObject *__pyx_tp_new_12opencvsample_PyMat(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_12opencvsample_PyMat *p;
+static PyObject *__pyx_tp_new_6pymynt_PyMat(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_6pymynt_PyMat *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -6452,17 +6448,17 @@ static PyObject *__pyx_tp_new_12opencvsample_PyMat(PyTypeObject *t, PyObject *a,
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_12opencvsample_PyMat *)o);
+  p = ((struct __pyx_obj_6pymynt_PyMat *)o);
   new((void*)&(p->mat)) cv::Mat();
-  if (unlikely(__pyx_pw_12opencvsample_5PyMat_1__cinit__(o, a, k) < 0)) goto bad;
+  if (unlikely(__pyx_pw_6pymynt_5PyMat_1__cinit__(o, a, k) < 0)) goto bad;
   return o;
   bad:
   Py_DECREF(o); o = 0;
   return NULL;
 }
 
-static void __pyx_tp_dealloc_12opencvsample_PyMat(PyObject *o) {
-  struct __pyx_obj_12opencvsample_PyMat *p = (struct __pyx_obj_12opencvsample_PyMat *)o;
+static void __pyx_tp_dealloc_6pymynt_PyMat(PyObject *o) {
+  struct __pyx_obj_6pymynt_PyMat *p = (struct __pyx_obj_6pymynt_PyMat *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely(PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE) && Py_TYPE(o)->tp_finalize) && (!PyType_IS_GC(Py_TYPE(o)) || !_PyGC_FINALIZED(o))) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -6472,19 +6468,19 @@ static void __pyx_tp_dealloc_12opencvsample_PyMat(PyObject *o) {
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static PyMethodDef __pyx_methods_12opencvsample_PyMat[] = {
-  {"get_mat", (PyCFunction)__pyx_pw_12opencvsample_5PyMat_3get_mat, METH_NOARGS, 0},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_12opencvsample_5PyMat_5__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_12opencvsample_5PyMat_7__setstate_cython__, METH_O, 0},
+static PyMethodDef __pyx_methods_6pymynt_PyMat[] = {
+  {"get_mat", (PyCFunction)__pyx_pw_6pymynt_5PyMat_3get_mat, METH_NOARGS, 0},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_6pymynt_5PyMat_5__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_6pymynt_5PyMat_7__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_12opencvsample_PyMat = {
+static PyTypeObject __pyx_type_6pymynt_PyMat = {
   PyVarObject_HEAD_INIT(0, 0)
-  "opencvsample.PyMat", /*tp_name*/
-  sizeof(struct __pyx_obj_12opencvsample_PyMat), /*tp_basicsize*/
+  "pymynt.PyMat", /*tp_name*/
+  sizeof(struct __pyx_obj_6pymynt_PyMat), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_12opencvsample_PyMat, /*tp_dealloc*/
+  __pyx_tp_dealloc_6pymynt_PyMat, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -6517,7 +6513,7 @@ static PyTypeObject __pyx_type_12opencvsample_PyMat = {
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_12opencvsample_PyMat, /*tp_methods*/
+  __pyx_methods_6pymynt_PyMat, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -6527,7 +6523,7 @@ static PyTypeObject __pyx_type_12opencvsample_PyMat = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_12opencvsample_PyMat, /*tp_new*/
+  __pyx_tp_new_6pymynt_PyMat, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -6555,17 +6551,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_opencvsample(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_pymynt(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_opencvsample},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_pymynt},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "opencvsample",
+    "pymynt",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -6639,11 +6635,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_numpy_core_multiarray_failed_to, __pyx_k_numpy_core_multiarray_failed_to, sizeof(__pyx_k_numpy_core_multiarray_failed_to), 0, 0, 1, 0},
   {&__pyx_kp_s_numpy_core_umath_failed_to_impor, __pyx_k_numpy_core_umath_failed_to_impor, sizeof(__pyx_k_numpy_core_umath_failed_to_impor), 0, 0, 1, 0},
   {&__pyx_n_s_openImage, __pyx_k_openImage, sizeof(__pyx_k_openImage), 0, 0, 1, 1},
-  {&__pyx_n_s_opencvsample, __pyx_k_opencvsample, sizeof(__pyx_k_opencvsample), 0, 0, 1, 1},
-  {&__pyx_kp_s_opencvsample_pyx, __pyx_k_opencvsample_pyx, sizeof(__pyx_k_opencvsample_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_order, __pyx_k_order, sizeof(__pyx_k_order), 0, 0, 1, 1},
   {&__pyx_n_s_pil_img, __pyx_k_pil_img, sizeof(__pyx_k_pil_img), 0, 0, 1, 1},
   {&__pyx_n_s_pyarr, __pyx_k_pyarr, sizeof(__pyx_k_pyarr), 0, 0, 1, 1},
+  {&__pyx_n_s_pymynt, __pyx_k_pymynt, sizeof(__pyx_k_pymynt), 0, 0, 1, 1},
+  {&__pyx_kp_s_pymynt_pyx, __pyx_k_pymynt_pyx, sizeof(__pyx_k_pymynt_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_reduce, __pyx_k_reduce, sizeof(__pyx_k_reduce), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_cython, __pyx_k_reduce_cython, sizeof(__pyx_k_reduce_cython), 0, 0, 1, 1},
@@ -6672,7 +6668,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "opencvsample.pyx":12
+  /* "pymynt.pyx":12
  * cdef Mat np2Mat3D(np.ndarray ary):
  *     assert ary.ndim==3 and ary.shape[2]==3, "ASSERT::3channel RGB only!!"
  *     ary = np.dstack((ary[...,2], ary[...,1], ary[...,0])) #RGB -> BGR             # <<<<<<<<<<<<<<
@@ -6689,7 +6685,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "opencvsample.pyx":60
+  /* "pymynt.pyx":60
  *             out = np2Mat2D(ary)
  *         else:
  *             raise TypeError("array data type is not valid")             # <<<<<<<<<<<<<<
@@ -6796,7 +6792,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "opencvsample.pyx":48
+  /* "pymynt.pyx":48
  *     return m
  * 
  * def npto32ftonp(nparr):             # <<<<<<<<<<<<<<
@@ -6806,9 +6802,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__14 = PyTuple_Pack(1, __pyx_n_s_nparr); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_opencvsample_pyx, __pyx_n_s_npto32ftonp, 48, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pymynt_pyx, __pyx_n_s_npto32ftonp, 48, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 48, __pyx_L1_error)
 
-  /* "opencvsample.pyx":98
+  /* "pymynt.pyx":98
  * 
  * 
  * def np2Mat2np(nparray):             # <<<<<<<<<<<<<<
@@ -6818,9 +6814,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__16 = PyTuple_Pack(3, __pyx_n_s_nparray, __pyx_n_s_m, __pyx_n_s_pyarr); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
-  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_opencvsample_pyx, __pyx_n_s_np2Mat2np, 98, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pymynt_pyx, __pyx_n_s_np2Mat2np, 98, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 98, __pyx_L1_error)
 
-  /* "opencvsample.pyx":154
+  /* "pymynt.pyx":154
  *   waitKey(1000)
  * 
  * def openImage(pil_img):             # <<<<<<<<<<<<<<
@@ -6830,18 +6826,18 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__18 = PyTuple_Pack(2, __pyx_n_s_pil_img, __pyx_n_s_m); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
-  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_opencvsample_pyx, __pyx_n_s_openImage, 154, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pymynt_pyx, __pyx_n_s_openImage, 154, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 154, __pyx_L1_error)
 
-  /* "opencvsample.pyx":162
+  /* "pymynt.pyx":162
  * ##########################################
  * 
  * def init_camera():             # <<<<<<<<<<<<<<
  *   init()
  * 
  */
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_opencvsample_pyx, __pyx_n_s_init_camera, 162, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pymynt_pyx, __pyx_n_s_init_camera, 162, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 162, __pyx_L1_error)
 
-  /* "opencvsample.pyx":165
+  /* "pymynt.pyx":165
  *   init()
  * 
  * def get_depth_image():             # <<<<<<<<<<<<<<
@@ -6851,9 +6847,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__21 = PyTuple_Pack(1, __pyx_n_s_m); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_opencvsample_pyx, __pyx_n_s_get_depth_image, 165, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 165, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pymynt_pyx, __pyx_n_s_get_depth_image, 165, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 165, __pyx_L1_error)
 
-  /* "opencvsample.pyx":169
+  /* "pymynt.pyx":169
  *   return Mat2np(m)
  * 
  * def show_depth_image():             # <<<<<<<<<<<<<<
@@ -6863,7 +6859,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__23 = PyTuple_Pack(1, __pyx_n_s_m); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_opencvsample_pyx, __pyx_n_s_show_depth_image, 169, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pymynt_pyx, __pyx_n_s_show_depth_image, 169, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -6917,16 +6913,16 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_12opencvsample_PyMat) < 0) __PYX_ERR(0, 110, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_6pymynt_PyMat) < 0) __PYX_ERR(0, 110, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_12opencvsample_PyMat.tp_print = 0;
+  __pyx_type_6pymynt_PyMat.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_12opencvsample_PyMat.tp_dictoffset && __pyx_type_12opencvsample_PyMat.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_12opencvsample_PyMat.tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_6pymynt_PyMat.tp_dictoffset && __pyx_type_6pymynt_PyMat.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_6pymynt_PyMat.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_PyMat, (PyObject *)&__pyx_type_12opencvsample_PyMat) < 0) __PYX_ERR(0, 110, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_12opencvsample_PyMat) < 0) __PYX_ERR(0, 110, __pyx_L1_error)
-  __pyx_ptype_12opencvsample_PyMat = &__pyx_type_12opencvsample_PyMat;
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_PyMat, (PyObject *)&__pyx_type_6pymynt_PyMat) < 0) __PYX_ERR(0, 110, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_6pymynt_PyMat) < 0) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_ptype_6pymynt_PyMat = &__pyx_type_6pymynt_PyMat;
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -7004,11 +7000,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initopencvsample(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initopencvsample(void)
+__Pyx_PyMODINIT_FUNC initpymynt(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initpymynt(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_opencvsample(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_opencvsample(void)
+__Pyx_PyMODINIT_FUNC PyInit_pymynt(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_pymynt(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -7075,7 +7071,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_opencvsample(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_pymynt(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -7084,7 +7080,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_opencvsample(PyObject *__pyx_pyini
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'opencvsample' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'pymynt' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -7099,7 +7095,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_opencvsample(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_pymynt(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -7138,7 +7134,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("opencvsample", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("pymynt", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -7156,14 +7152,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_opencvsample) {
+  if (__pyx_module_is_main_pymynt) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "opencvsample")) {
-      if (unlikely(PyDict_SetItemString(modules, "opencvsample", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "pymynt")) {
+      if (unlikely(PyDict_SetItemString(modules, "pymynt", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -7184,7 +7180,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "opencvsample.pyx":1
+  /* "pymynt.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np # for np.ndarray
  * from libcpp.string cimport string
@@ -7194,79 +7190,79 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":48
+  /* "pymynt.pyx":48
  *     return m
  * 
  * def npto32ftonp(nparr):             # <<<<<<<<<<<<<<
  *     assert nparr.dtype == np.float32, "array dtype must be float32"
  *     return Mat2np(np2Mat2D_F32(nparr))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12opencvsample_1npto32ftonp, NULL, __pyx_n_s_opencvsample); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6pymynt_1npto32ftonp, NULL, __pyx_n_s_pymynt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_npto32ftonp, __pyx_t_1) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":98
+  /* "pymynt.pyx":98
  * 
  * 
  * def np2Mat2np(nparray):             # <<<<<<<<<<<<<<
  *     cdef Mat m
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12opencvsample_3np2Mat2np, NULL, __pyx_n_s_opencvsample); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6pymynt_3np2Mat2np, NULL, __pyx_n_s_pymynt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np2Mat2np, __pyx_t_1) < 0) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":154
+  /* "pymynt.pyx":154
  *   waitKey(1000)
  * 
  * def openImage(pil_img):             # <<<<<<<<<<<<<<
  *   cdef Mat m
  *   m = np2Mat(np.array(pil_img))
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12opencvsample_5openImage, NULL, __pyx_n_s_opencvsample); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6pymynt_5openImage, NULL, __pyx_n_s_pymynt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_openImage, __pyx_t_1) < 0) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":162
+  /* "pymynt.pyx":162
  * ##########################################
  * 
  * def init_camera():             # <<<<<<<<<<<<<<
  *   init()
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12opencvsample_7init_camera, NULL, __pyx_n_s_opencvsample); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6pymynt_7init_camera, NULL, __pyx_n_s_pymynt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_init_camera, __pyx_t_1) < 0) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":165
+  /* "pymynt.pyx":165
  *   init()
  * 
  * def get_depth_image():             # <<<<<<<<<<<<<<
  *   m = getDepthImage()
  *   return Mat2np(m)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12opencvsample_9get_depth_image, NULL, __pyx_n_s_opencvsample); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6pymynt_9get_depth_image, NULL, __pyx_n_s_pymynt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_depth_image, __pyx_t_1) < 0) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":169
+  /* "pymynt.pyx":169
  *   return Mat2np(m)
  * 
  * def show_depth_image():             # <<<<<<<<<<<<<<
  *   m = getDepthImage()
  *   showMat(m)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12opencvsample_11show_depth_image, NULL, __pyx_n_s_opencvsample); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6pymynt_11show_depth_image, NULL, __pyx_n_s_pymynt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_show_depth_image, __pyx_t_1) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "opencvsample.pyx":1
+  /* "pymynt.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np # for np.ndarray
  * from libcpp.string cimport string
@@ -7291,11 +7287,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init opencvsample", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init pymynt", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init opencvsample");
+    PyErr_SetString(PyExc_ImportError, "init pymynt");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

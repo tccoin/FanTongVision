@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(mynteyed_demo VERSION 1.0.0 LANGUAGES C CXX)
+project(myntmynt_wrapper VERSION 1.0.0 LANGUAGES C CXX)
 
 # flags
 
@@ -51,10 +51,10 @@ include_directories(
   ${OpenCV_INCLUDE_DIRS}
 )
 
-## mynteyed_demo
+## myntmynt_wrapper
 
-add_executable(mynteyed_demo wrapper.cpp)
-target_link_libraries(mynteyed_demo mynteye_depth ${OpenCV_LIBS})
+add_executable(myntmynt_wrapper wrapper.cpp)
+target_link_libraries(myntmynt_wrapper mynteye_depth ${OpenCV_LIBS})
 
 
 # Build
@@ -65,10 +65,10 @@ target_link_libraries(mynteyed_demo mynteye_depth ${OpenCV_LIBS})
 #   cmake -G "Visual Studio 15 2017 Win64" ..
 #   msbuild.exe ALL_BUILD.vcxproj /property:Configuration=Release
 #
-#   .\Release\mynteyed_demo.exe
+#   .\Release\myntmynt_wrapper.exe
 #   
 #   # unix
 #   cmake ..
 #   make
 #
-#   ./mynteyed_demo
+#   ./myntmynt_wrapper

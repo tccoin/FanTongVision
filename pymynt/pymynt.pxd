@@ -31,8 +31,6 @@ cdef extern from "Python.h":
 
 
 cdef extern from "wrapper.cpp":
-    pass
-
-cdef extern from "wrapper.hpp":
   int init()
   Mat getDepthImage()
+  

@@ -2,7 +2,7 @@ import numpy as np
 cimport numpy as np # for np.ndarray
 from libcpp.string cimport string
 from libc.string cimport memcpy
-from opencv_mat cimport *
+from pymynt cimport *
 
 
 ###########################################

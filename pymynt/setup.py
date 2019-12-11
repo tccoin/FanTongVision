@@ -13,8 +13,8 @@ print("OPENCV LIBS=", libs)
 
 setup(
     cmdclass = {'build_ext': build_ext},
-    ext_modules = cythonize(Extension("opencvsample",
-                                      sources = ["opencvsample.pyx"],
+    ext_modules = cythonize(Extension("pymynt",
+                                      sources = ["pymynt.pyx"],
                                       language = "c++",
                                       libraries=["mynteye_depth"],
                                       include_dirs=[numpy.get_include(), "/usr/include/"],
