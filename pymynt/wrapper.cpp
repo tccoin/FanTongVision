@@ -1,4 +1,5 @@
 #include <iostream>
+
 #define WITH_OPENCV
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -12,7 +13,6 @@
 
 MYNTEYE_USE_NAMESPACE
 
-
 Camera cam;
 OpenParams params;
 
@@ -24,7 +24,7 @@ cv::Mat getDepthImage(){
       cv::Mat depth = image_depth.img->ToMat();
       return depth;
     }else if(params.depth_mode==DepthMode::DEPTH_RAW){
-      cv::Mat depth = image_depth.img->ToMat();
+      cv::Mat depth = image_depth.img->To(ImageFormat::DEPTH_RAW)->ToMat();
       return depth;
     }else if(params.depth_mode==DepthMode::DEPTH_COLORFUL){
       auto depth_img = image_depth.img->To(ImageFormat::COLOR_BGR);
@@ -41,7 +41,7 @@ cv::Mat getDepthImage(){
 
 
 
-int init() {
+int init(int depth_mode) {
   DeviceInfo dev_info;
   if (!util::select(cam, &dev_info)) {
     return 1;
@@ -53,7 +53,7 @@ int init() {
 
   params = OpenParams(dev_info.index);
   params.dev_mode = DeviceMode::DEVICE_DEPTH;
-  params.depth_mode = DepthMode::DEPTH_GRAY;
+  params.depth_mode = static_cast<DepthMode>(depth_mode);
   params.stream_mode = StreamMode::STREAM_1280x720;
   params.ir_intensity = 4;
   params.framerate = 60;
@@ -70,7 +70,7 @@ int init() {
 }
 
 int main(){
-  init();
+  init(1);
 
   std::cout << "Press ESC/Q on Windows to terminate" << std::endl;
   

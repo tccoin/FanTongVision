@@ -1,7 +1,10 @@
 #ifndef MYNTEYED_PY_WRAPPER_H
 #define MYNTEYED_PY_WRAPPER_H
 
-int init();
+#include <mynteyed/camera.h>
+#include <opencv2/highgui/highgui.hpp>
+
+int init(int depth_mode);
 cv::Mat getDepthImage();
 
 #endif
