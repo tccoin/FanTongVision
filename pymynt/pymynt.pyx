@@ -79,9 +79,10 @@ cdef object Mat2np(Mat m):
                 shape_array = (m.rows, m.cols, m.channels())
         else:
                 shape_array = (m.rows, m.cols)
-
         if m.depth() == CV_32F :
                 ary = np.ndarray(shape=shape_array, buffer=Pydata, order='c', dtype=np.float32)
+        elif m.depth() == CV_16UC1 :
+                ary = np.ndarray(shape=shape_array, buffer=Pydata, order='c', dtype=np.uint16)
         else :
         #8-bit image
                 ary = np.ndarray(shape=shape_array, buffer=Pydata, order='c', dtype=np.uint8)
