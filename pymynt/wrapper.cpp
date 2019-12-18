@@ -19,7 +19,6 @@ OpenParams params;
 cv::Mat getDepthImage(){
   auto image_depth = cam.GetStreamData(ImageType::IMAGE_DEPTH);
   if (image_depth.img) {
-    std::cout << "Get Depth Image success" << std::endl << std::endl;
     if(params.depth_mode==DepthMode::DEPTH_GRAY){
       cv::Mat depth = image_depth.img->ToMat();
       return depth;
