@@ -17,6 +17,7 @@ Camera cam;
 OpenParams params;
 
 cv::Mat getDepthImage(){
+  cam.WaitForStream();
   auto image_depth = cam.GetStreamData(ImageType::IMAGE_DEPTH);
   if (image_depth.img) {
     if(params.depth_mode==DepthMode::DEPTH_GRAY){
@@ -70,16 +71,16 @@ int init(int depth_mode) {
 
 int main(){
   init(1);
+  cv::Mat depth = getDepthImage();
 
   std::cout << "Press ESC/Q on Windows to terminate" << std::endl;
-  
 
-  cv::namedWindow("depth");
-  cv::Mat depth = getDepthImage();
-  cv::imshow("depth", depth);
-  cv::waitKey(-1);
 
-  cv::destroyAllWindows();
+  // cv::namedWindow("depth");
+  // cv::imshow("depth", depth);
+  // cv::waitKey(-1);
+
+  // cv::destroyAllWindows();
   cam.Close();
   return 0;
 }
