@@ -33,7 +33,33 @@ cv::Mat getDepthImage(){
       return depth;
     }
   }else{
-    std::cout << "Get Depth Image failed" << std::endl << std::endl;
+    std::cout << "Get Depth Image failed" << std::endl;
+    cv::Mat m(1,1,CV_8UC3);
+    return m;
+  }
+}
+
+cv::Mat getLeftImage(){
+  cam.WaitForStream();
+  auto left_color = cam.GetStreamData(ImageType::IMAGE_LEFT_COLOR);
+  if (left_color.img) {
+    cv::Mat left = left_color.img->To(ImageFormat::COLOR_BGR)->ToMat();
+    return left;
+  }else{
+    std::cout << "Get Left Image failed" << std::endl;
+    cv::Mat m(1,1,CV_8UC3);
+    return m;
+  }
+}
+
+cv::Mat getRightImage(){
+  cam.WaitForStream();
+  auto right_color = cam.GetStreamData(ImageType::IMAGE_RIGHT_COLOR);
+  if (right_color.img) {
+    cv::Mat right = right_color.img->To(ImageFormat::COLOR_BGR)->ToMat();
+    return right;
+  }else{
+    std::cout << "Get Right Image failed" << std::endl;
     cv::Mat m(1,1,CV_8UC3);
     return m;
   }
@@ -52,12 +78,16 @@ int init(int depth_mode) {
     << dev_info.name << std::endl << std::endl;
 
   params = OpenParams(dev_info.index);
-  params.dev_mode = DeviceMode::DEVICE_DEPTH;
+  params.dev_mode = DeviceMode::DEVICE_ALL;
   params.depth_mode = static_cast<DepthMode>(depth_mode);
   params.stream_mode = StreamMode::STREAM_1280x720;
-  params.ir_intensity = 4;
+  params.color_mode = ColorMode::COLOR_RECTIFIED;
+  params.ir_intensity = 0;
+  params.state_ae = true;
+  params.state_awb = true;
   params.framerate = 60;
   cam.Open(params);
+
 
   std::cout << std::endl;
   if (!cam.IsOpened()) {

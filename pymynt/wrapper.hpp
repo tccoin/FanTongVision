@@ -6,5 +6,7 @@
 
 int init(int depth_mode);
 cv::Mat getDepthImage();
+cv::Mat getRightImage();
+cv::Mat getLeftImage();
 
 #endif

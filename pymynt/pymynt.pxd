@@ -48,4 +48,6 @@ cdef extern from "mynteyed/device/types.h" namespace "mynteyed::DepthMode":
 cdef extern from "wrapper.cpp":
   int init(int depth_mode)
   Mat getDepthImage()
+  Mat getLeftImage()
+  Mat getRightImage()
   

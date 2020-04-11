@@ -176,6 +176,16 @@ def get_depth_image():
     return Mat2np(m)
 
 
+def get_left_image():
+    m = getLeftImage()
+    return Mat2np(m)
+
+
+def get_right_image():
+    m = getRightImage()
+    return Mat2np(m)
+
+
 def show_depth_image():
     m = getDepthImage()
     showMat(m)

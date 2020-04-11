@@ -27,5 +27,7 @@ while True:
         print(_, ' depth :', mat[_[1], _[0]])
         cv2.circle(out, _, 8, (100, 100, 200), 2)
     cv2.imshow('depth', out)
+    left = pymynt.get_left_image()[:,:,::-1]
+    cv2.imshow('left', left)
     cv2.setMouseCallback('depth', printDepth)
     cv2.waitKey(18)
