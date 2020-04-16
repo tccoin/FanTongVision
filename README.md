@@ -10,6 +10,7 @@ Codes for engineer robot to fetch the ammo.
 conda create -n cv numpy pytorch torchvision cudatoolkit=9.0 python=3.7 --channel menpo opencv
 pip install opencv-contrib-python
 ```
+3. 安装并编译[pymynt](https://github.com/tccoin/pymynt)
 
 ## Poet
 
